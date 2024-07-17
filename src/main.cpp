@@ -85,7 +85,7 @@ void play_audio()
 int16_t* convert_audio_data(const uint8_t *audio_data, size_t audio_data_len) {
 
   // Step 1: Convert from uint8_t to uint16_t
-  int16_t *audio_data_uint16 = (int16_t *)malloc(audio_data_len / 2 * sizeof(uint16_t));
+  int16_t *audio_data_uint16 = (int16_t *)malloc(audio_data_len / 2 * sizeof(int16_t));
   for (size_t i = 0; i < audio_data_len / 2; i++) 
   {
     audio_data_uint16[i] = (audio_data[2 * i + 1] << 8) | audio_data[2 * i];
